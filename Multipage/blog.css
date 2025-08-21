@@ -1,0 +1,211 @@
+/* fonts  */
+@font-face {
+    font-family: "Raleway-regular";
+    src: url(../fonts/Raleway-Regular.ttf)
+}
+
+@font-face {
+    font-family: "Raleway-medium";
+    src: url(../fonts/Raleway-Medium.ttf)
+}
+
+@font-face {
+    font-family: "Raleway-bold";
+    src: url(../fonts/Raleway-Bold.ttf)
+}
+
+@font-face {
+    font-family: "Raleway-extrabold";
+    src: url(../fonts/Raleway-ExtraBold.ttf)
+}
+
+@font-face {
+    font-family: "Raleway-semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf)
+}
+
+@font-face {
+    font-family: "Raleway-black";
+    src: url(../fonts/Raleway-Black.ttf)
+}
+
+/* colors  */
+
+:root {
+    --primary: #EEBF00;
+    --secondary: #232B38;
+    --ternary: #6C6C6C;
+    --danger: #FE4545;
+    --pure: #FEFEFE;
+    --light: #F0F0F0;
+    --heaven: #FFFFFF;
+    --footer: #2D333F;
+}
+
+/* Reset  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Raleway-regular";
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+section.latest-news {
+    background: var(--light);
+    position: relative;
+    z-index: 0;
+}
+
+section.latest-news .article-wrapper {
+    display: flex;
+    margin-right: -2rem;
+}
+
+section.latest-news .article-wrapper .card {
+    margin-right: 2rem;
+    background: var(--heaven);
+    border-radius: 4px;
+}
+
+.latest-news .article-wrapper .card img {
+    width: 100%;
+}
+
+.latest-news .article-wrapper .card .card-content {
+    padding: 2rem;
+}
+
+.latest-news .article-wrapper .card .card-content .post-meta {
+    margin-bottom: 1rem;
+}
+
+.latest-news .article-wrapper .card .card-content .post-meta .comment-count {
+    color: var(--ternary);
+    font-family: "Raleway-medium";
+    margin-left: 1rem;
+}
+
+.latest-news .article-wrapper .card .card-content h2 {
+    font-family: "Raleway-bold";
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.latest-news .article-wrapper .card .card-content p {
+    line-height: 1.6;
+}
+
+.latest-news .btn-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#viewAllBtn {
+    background: var(--primary);
+    color: var(--heaven);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-family: "Raleway-bold";
+    border-radius: 25px;
+    box-shadow: 0 4px 16px rgba(232, 191, 0, 0.15);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    margin-top: 1rem;
+}
+
+#viewAllBtn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    box-shadow: 0 6px 24px rgba(35, 43, 56, 0.15);
+}
+
+#showLessBtn {
+    background: var(--primary);
+    color: var(--heaven);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-family: "Raleway-bold";
+    border-radius: 25px;
+    box-shadow: 0 4px 16px rgba(232, 191, 0, 0.15);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    margin-top: 1rem;
+}
+
+#showLessBtn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    box-shadow: 0 6px 24px rgba(35, 43, 56, 0.15);
+}
+
+/* Responsive styles for blog page */
+@media (max-width: 992px) {
+    section.latest-news .article-wrapper {
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-right: 0;
+    }
+
+    section.latest-news .article-wrapper .card {
+        flex: 1 1 45%;
+        margin-right: 0;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    section.latest-news .article-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    section.latest-news .article-wrapper .card {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .latest-news .article-wrapper .card .card-content {
+        padding: 1rem;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-heading {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .latest-news .btn-wrapper {
+        margin-top: 1rem;
+    }
+
+    section.latest-news .article-wrapper .card .card-content h2 {
+        font-size: 1rem;
+    }
+
+    section.latest-news .article-wrapper .card .card-content p {
+        font-size: 0.95rem;
+    }
+}
